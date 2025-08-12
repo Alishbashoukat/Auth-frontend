@@ -42,7 +42,7 @@ const handleSubmit = async (e) => {
   };
 
   try {
-    const res = await fetch("http://localhost:5000/api/profile", {
+    const res = await fetch("https://auth-backend-phi-lovat.vercel.app/api/profile", {
       method: "POST", // backend already handles create or update
       headers: {
         "Content-Type": "application/json",
