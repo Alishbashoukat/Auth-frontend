@@ -11,7 +11,7 @@ function Dashboard() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await fetch("http://auth-backend-phi-lovat.vercel.app/api/profile/", {
+        const res = await fetch("https://auth-backend-phi-lovat.vercel.app/api/profile/", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!res.ok) throw new Error("Failed to fetch profile");
@@ -27,7 +27,7 @@ function Dashboard() {
 
   const handleSave = async (profileData) => {
     const method = profile ? "PUT" : "POST";
-    const url = "http://auth-backend-phi-lovat.vercel.app/api/profile/";
+    const url = "https://auth-backend-phi-lovat.vercel.app/api/profile/";
 
     try {
       const res = await fetch(url, {
